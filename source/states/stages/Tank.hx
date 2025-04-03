@@ -292,9 +292,8 @@ class Tank extends BaseStage
 		});
 		Paths.sound('stressCutscene');
 
-		pico = new BGSprite(gf.x + 150, gf.y + 450);
-		pico.showPivot = false;
-		Paths.getSparrowAtlas(pico, 'cutscenes/demon_gf');
+		pico = new BGSprite(-50, 230);
+		pico.frames = Paths.getSparrowAtlas('pico', 'cutscenes/demon_gf');
 		pico.antialiasing = ClientPrefs.data.antialiasing;
 		pico.animation.addByPrefix('dance', 'GF Dancing at Gunpoint', 24, true);
 		pico.animation.addByPrefix('dieBitch', 'GF Time to Die sequence', 24, false);
@@ -306,7 +305,7 @@ class Tank extends BaseStage
 
 		// prepare pico animation cycle
 		function picoStressCycle() {
-			switch (pico.animation.curInstance.symbol.name) {
+			switch (pico.animation.curInstance.name) {
 				case "dieBitch", "GF Time to Die sequence":
 					pico.anim.play('picoAppears', true);
 					boyfriendGroup.alpha = 1;
