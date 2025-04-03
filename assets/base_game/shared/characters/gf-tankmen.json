@@ -1,10 +1,7 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				0,
-				-9
-			],
+			"offsets": [0,0],
 			"loop": false,
 			"fps": 24,
 			"anim": "danceRight",
@@ -28,10 +25,7 @@
 			"name": "GF Dancing at Gunpoint"
 		},
 		{
-			"offsets": [
-				0,
-				-9
-			],
+			"offsets": [0,0],
 			"loop": false,
 			"fps": 24,
 			"anim": "danceLeft",
@@ -56,10 +50,7 @@
 			"name": "GF Dancing at Gunpoint"
 		},
 		{
-			"offsets": [
-				0,
-				-27
-			],
+			"offsets": [57,-19],
 			"loop": false,
 			"fps": 24,
 			"anim": "sad",
@@ -83,10 +74,7 @@
 	],
 	"no_antialiasing": false,
 	"image": "characters/week7/gfTankmen",
-	"position": [
-		0,
-		0
-	],
+	"position": [-50,230],
 	"healthicon": "gf",
 	"flip_x": false,
 	"healthbar_colors": [
@@ -94,10 +82,7 @@
 		0,
 		77
 	],
-	"camera_position": [
-		0,
-		140
-	],
+	"camera_position": [-50,230],
 	"sing_duration": 4,
 	"scale": 1
 }
