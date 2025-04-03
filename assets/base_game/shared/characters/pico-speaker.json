@@ -1,10 +1,7 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				0,
-				0
-			],
+			"offsets": [5,134],
 			"loop": false,
 			"fps": 24,
 			"anim": "shoot1",
@@ -12,10 +9,7 @@
 			"name": "Pico shoot 1"
 		},
 		{
-			"offsets": [
-				-1,
-				-128
-			],
+			"offsets": [-8,5],
 			"loop": false,
 			"fps": 24,
 			"anim": "shoot2",
@@ -23,10 +17,7 @@
 			"name": "Pico shoot 2"
 		},
 		{
-			"offsets": [
-				412,
-				-64
-			],
+			"offsets": [568,68],
 			"loop": false,
 			"fps": 24,
 			"anim": "shoot3",
@@ -34,10 +25,7 @@
 			"name": "Pico shoot 3"
 		},
 		{
-			"offsets": [
-				439,
-				-19
-			],
+			"offsets": [579,114],
 			"loop": false,
 			"fps": 24,
 			"anim": "shoot4",
@@ -45,18 +33,11 @@
 			"name": "Pico shoot 4"
 		},
 		{
-			"offsets": [
-				412,
-				-64
-			],
+			"offsets": [568,68],
 			"loop": true,
 			"fps": 24,
 			"anim": "shoot3-loop",
-			"indices": [
-				50,
-				51,
-				52
-			],
+			"indices": [23,24,25],
 			"name": "Pico shoot 3"
 		},
 		{
@@ -67,47 +48,32 @@
 			"loop": true,
 			"fps": 24,
 			"anim": "shoot1-loop",
-			"indices": [
-				23,
-				24,
-				25
-			],
+			"indices": [23,24,25],
 			"name": "Pico shoot 1"
 		},
 		{
-			"offsets": [
-				1,
-				-128
-			],
+			"offsets": [-8,5],
 			"loop": true,
 			"fps": 24,
 			"anim": "shoot2-loop",
-			"indices": [
-				57,
-				58,
-				59
-			],
+			"indices": [23,24,25],
 			"name": "Pico shoot 2"
 		},
 		{
-			"offsets": [
-				439,
-				-19
-			],
+			"offsets": [5,134],
 			"loop": true,
 			"fps": 24,
 			"anim": "shoot4-loop",
-			"indices": [
-				50,
-				51,
-				52
-			],
+			"indices": [],
 			"name": "Pico shoot 4"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/picoSpeaker",
-	"position": [170,80],
+	"image": "characters/week7/picoSpeaker",
+	"position": [
+		-50,
+		230
+	],
 	"healthicon": "pico",
 	"flip_x": false,
 	"healthbar_colors": [
@@ -115,7 +81,10 @@
 		216,
 		85
 	],
-	"camera_position": [-50,230],
+	"camera_position": [
+		170,
+		80
+	],
 	"sing_duration": 4,
 	"scale": 1
 }
