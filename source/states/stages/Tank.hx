@@ -292,8 +292,7 @@ class Tank extends BaseStage
 		});
 		Paths.sound('stressCutscene');
 
-		pico = new BGSprite(-50, 230);
-		pico.frames = Paths.getSparrowAtlas('pico', 'cutscenes/demon_gf');
+		pico = new BGSprite('cutscenes/demon_gf', -50, 230);
 		pico.antialiasing = ClientPrefs.data.antialiasing;
 		pico.animation.addByPrefix('dance', 'GF Dancing at Gunpoint', 24, true);
 		pico.animation.addByPrefix('dieBitch', 'GF Time to Die sequence', 24, false);
@@ -305,9 +304,9 @@ class Tank extends BaseStage
 
 		// prepare pico animation cycle
 		function picoStressCycle() {
-			switch (pico.animation.curInstance.name) {
+			switch (pico.animation.name) {
 				case "dieBitch", "GF Time to Die sequence":
-					pico.anim.play('picoAppears', true);
+					pico.animation.play('picoAppears', true);
 					boyfriendGroup.alpha = 1;
 					boyfriendCutscene.visible = false;
 					boyfriend.playAnim('bfCatch', true);
@@ -324,8 +323,8 @@ class Tank extends BaseStage
 				case "picoEnd", "Pico Dual Wield on Speaker idle":
 					gfGroup.alpha = 1;
 					pico.visible = false;
-					if (pico.anim.onComplete.has(picoStressCycle)) // for safety
-						pico.anim.onComplete.remove(picoStressCycle);
+					if (pico.animation.has(picoStressCycle)) // for safety
+						pico.animation.remove(picoStressCycle);
 			}
 		}
 		pico.animation.onComplete.add(picoStressCycle);
@@ -356,7 +355,7 @@ class Tank extends BaseStage
 		{
 			FlxTween.tween(camFollow, {x: 650, y: 300}, 1, {ease: FlxEase.sineOut});
 			FlxTween.tween(FlxG.camera, {zoom: 0.9 * 1.2 * 1.2}, 2.25, {ease: FlxEase.quadInOut});
-			pico.anim.play('dieBitch', true);
+			pico.animation.play('dieBitch', true);
 		});
 
 		cutsceneHandler.timer(17.5, function()
