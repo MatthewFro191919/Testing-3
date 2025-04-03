@@ -133,7 +133,7 @@ class Tank extends BaseStage
 	// Cutscenes
 	var cutsceneHandler:CutsceneHandler;
 	var tankman:FlxAnimate;
-	var pico:FlxAnimate;
+	var pico:BGSprite;
 	var boyfriendCutscene:FlxSprite;
 	var audioPlaying:FlxSound;
 	function prepareCutscene()
@@ -292,9 +292,9 @@ class Tank extends BaseStage
 		});
 		Paths.sound('stressCutscene');
 
-		pico = new FlxAnimate(gf.x + 150, gf.y + 450);
+		pico = new BGSprite(gf.x + 150, gf.y + 450);
 		pico.showPivot = false;
-		Paths.loadAnimateAtlas(pico, 'cutscenes/picoAppears');
+		Paths.image(pico, 'cutscenes/demon_gf');
 		pico.antialiasing = ClientPrefs.data.antialiasing;
 		pico.anim.addBySymbol('dance', 'GF Dancing at Gunpoint', 24, true);
 		pico.anim.addBySymbol('dieBitch', 'GF Time to Die sequence', 24, false);
