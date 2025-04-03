@@ -107,10 +107,7 @@
 	],
 	"no_antialiasing": false,
 	"image": "characters/picoSpeaker",
-	"position": [
-		120,
-		-125
-	],
+	"position": [170,80],
 	"healthicon": "pico",
 	"flip_x": false,
 	"healthbar_colors": [
@@ -118,10 +115,7 @@
 		216,
 		85
 	],
-	"camera_position": [
-		-310,
-		100
-	],
+	"camera_position": [-50,230],
 	"sing_duration": 4,
 	"scale": 1
 }
