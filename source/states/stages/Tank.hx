@@ -294,19 +294,19 @@ class Tank extends BaseStage
 
 		pico = new BGSprite(gf.x + 150, gf.y + 450);
 		pico.showPivot = false;
-		Paths.image(pico, 'cutscenes/demon_gf');
+		Paths.getSparrowAtlas(pico, 'cutscenes/demon_gf');
 		pico.antialiasing = ClientPrefs.data.antialiasing;
-		pico.anim.addBySymbol('dance', 'GF Dancing at Gunpoint', 24, true);
-		pico.anim.addBySymbol('dieBitch', 'GF Time to Die sequence', 24, false);
-		pico.anim.addBySymbol('picoAppears', 'Pico Saves them sequence', 24, false);
-		pico.anim.addBySymbol('picoEnd', 'Pico Dual Wield on Speaker idle', 24, false);
-		pico.anim.play('dance', true);
+		pico.animation.addByPrefix('dance', 'GF Dancing at Gunpoint', 24, true);
+		pico.animation.addByPrefix('dieBitch', 'GF Time to Die sequence', 24, false);
+		pico.animation.addByPrefix('picoAppears', 'Pico Saves them sequence', 24, false);
+		pico.animation.addByPrefix('picoEnd', 'Pico Dual Wield on Speaker idle', 24, false);
+		pico.animation.play('dance', true);
 		addBehindGF(pico);
 		cutsceneHandler.push(pico);
 
 		// prepare pico animation cycle
 		function picoStressCycle() {
-			switch (pico.anim.curInstance.symbol.name) {
+			switch (pico.animation.curInstance.symbol.name) {
 				case "dieBitch", "GF Time to Die sequence":
 					pico.anim.play('picoAppears', true);
 					boyfriendGroup.alpha = 1;
@@ -321,7 +321,7 @@ class Tank extends BaseStage
 						}
 					};
 				case "picoAppears", "Pico Saves them sequence":
-					pico.anim.play('picoEnd', true);
+					pico.animation.play('picoEnd', true);
 				case "picoEnd", "Pico Dual Wield on Speaker idle":
 					gfGroup.alpha = 1;
 					pico.visible = false;
@@ -329,7 +329,7 @@ class Tank extends BaseStage
 						pico.anim.onComplete.remove(picoStressCycle);
 			}
 		}
-		pico.anim.onComplete.add(picoStressCycle);
+		pico.animation.onComplete.add(picoStressCycle);
 
 		boyfriendCutscene = new FlxSprite(boyfriend.x + 5, boyfriend.y + 20);
 		boyfriendCutscene.antialiasing = ClientPrefs.data.antialiasing;
